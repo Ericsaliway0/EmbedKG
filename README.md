@@ -39,9 +39,9 @@ These databases provide curated and integrated protein-protein interaction (PPI)
 5. Install DGL:
    - `conda install -c dglteam dgl`
 
-6. Download the data from the built gene association graph using the link below and place it in the `data/multiomics_meth/` directory before training:
-   - [Download Gene Association Data](https://drive.google.com/file/d/1l7mbTn2Nxsbc7LLLJzsT8y02scD23aWo/view?usp=sharing)
+6. Download the data from the built gene association graph using the link below and place it in the `data` directory before training:
+   - [Download built graphs](https://drive.google.com/file/d/1l7mbTn2Nxsbc7LLLJzsT8y02scD23aWo/view?usp=sharing)
 
-7. To train the model, run the following command:
-   - `python main.py --model_type ACGNN --net_type CPDB --score_threshold 0.99 --learning_rate 0.001 --num_epochs 200`
+7. To train the model for prediction, run the following command:
+   - `python main.py --in-feats 256 --out-feats 256 --num-heads 2 --num-layers 2 --lr 0.001 --input-size 2 --hidden-size 16 --feat-drop 0.5 --attn-drop 0.5 --epochs 201 --model_type GAT --net_type miRTarBase `
 
