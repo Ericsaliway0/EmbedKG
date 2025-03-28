@@ -4,8 +4,6 @@ This repository contains the code for our project,
 **"A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications,"**  
 submitted to the **OXFORD**.  
 
-You can learn more about the conference here:  
-[ICIBM 2025](https://icibm2025.iaibm.org/)
 
 ![Alt text](images/__overview_framework.png)
 
@@ -14,9 +12,9 @@ You can learn more about the conference here:
 
 The dataset is obtained from the following sources:
 
-- **[STRING database](https://string-db.org/cgi/download?sessionId=b7WYyccF6G1p)**  
-- **[HIPPIE: Human Integrated Protein-Protein Interaction rEference](https://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php)**  
-- **[ConsensusPathDB (CPDB)](http://cpdb.molgen.mpg.de/CPDB)**  
+- **[miRTarBase](https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2025/index.php)**  
+- **[TarBase](https://dianalab.e-ce.uth.gr/tarbasev9/downloads)**  
+- **[miRNet](https://www.mirnet.ca/)**  
 
 These databases provide curated and integrated protein-protein interaction (PPI) and pathway data for bioinformatics research.
 
