@@ -1,34 +1,49 @@
-# PERGAT: Pretrained Embeddings of Graph Neural Networks for miRNA-Cancer Association Predictions
-This repository provides the code for our research project "PERGAT: Pretrained Embeddings of Graph Neural Networks for miRNA-Cancer Association Predictions".
+## A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications,
+
+This repository contains the code for our project,  
+**"A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications,"**  
+submitted to the **OXFORD**.  
+
+You can learn more about the conference here:  
+[ICIBM 2025](https://icibm2025.iaibm.org/)
+
+![Alt text](images/__overview_framework.png)
 
 
-## Data resources
-The different dataset and KG used in this project are located in data directory. These files include:
+## Data Source
 
--) https://www.biosino.org/dbDEMC/index
+The dataset is obtained from the following sources:
 
+- **[STRING database](https://string-db.org/cgi/download?sessionId=b7WYyccF6G1p)**  
+- **[HIPPIE: Human Integrated Protein-Protein Interaction rEference](https://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php)**  
+- **[ConsensusPathDB (CPDB)](http://cpdb.molgen.mpg.de/CPDB)**  
 
-## Scripts
-
-
-## Setup
--)conda create -n kg python=3.10 -y
-
--)conda activate kg
-
--)pip install -r requirements.txt
+These databases provide curated and integrated protein-protein interaction (PPI) and pathway data for bioinformatics research.
 
 
-## Get start
-## get embedding
-python PERGAT_embedding/gat_embedding.py --in_feats 256 --out_feats 256 --num_layers 2 --num_heads 2 --batch_size 1 --lr 0.0001 --num_epochs 105
+## Setup and Get Started
 
-<<<<<<< HEAD
-## prediction
-python main.py --in-feats 256 --out-feats 256 --num-heads 8 --num-layers 2 --lr 0.001 --input-size 2 --hidden-size 16 --feat-drop 0.5 --attn-drop 0.5 --epochs 1000    
+1. Install the required dependencies:
+   - `pip install -r requirements.txt`
 
-=======
+2. Activate your Conda environment:
+   - `conda activate gnn`
 
-python main.py --in-feats 256 --out-feats 256 --num-heads 8 --num-layers 2 --lr 0.001 --input-size 2 --hidden-size 16 --feat-drop 0.5 --attn-drop 0.5 --epochs 1000    
+3. Install PyTorch:
+   - `conda install pytorch torchvision torchaudio -c pytorch`
 
->>>>>>> 007709138d8c23aac23bc2af32000b59e982b983
+4. Install the necessary Python packages:
+   - `pip install pandas`
+   - `pip install py2neo pandas matplotlib scikit-learn`
+   - `pip install tqdm`
+   - `pip install seaborn`
+
+5. Install DGL:
+   - `conda install -c dglteam dgl`
+
+6. Download the data from the built gene association graph using the link below and place it in the `data/multiomics_meth/` directory before training:
+   - [Download Gene Association Data](https://drive.google.com/file/d/1l7mbTn2Nxsbc7LLLJzsT8y02scD23aWo/view?usp=sharing)
+
+7. To train the model, run the following command:
+   - `python main.py --model_type ACGNN --net_type CPDB --score_threshold 0.99 --learning_rate 0.001 --num_epochs 200`
+
