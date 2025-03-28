@@ -1,8 +1,7 @@
 ## A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications,
 
 This repository contains the code for our project,  
-**"A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications,"**  
-submitted to the **OXFORD**.  
+**"A Knowledge Graph-Based Graph Neural Network Framework for Multi-Omics Applications."** 
 
 
 ![Alt text](images/__overview_framework.png)
